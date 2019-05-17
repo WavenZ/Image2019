@@ -55,9 +55,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ARPipeline.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="src\CameraCalibration.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -83,6 +80,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\myOpenGL.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARPipeline.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

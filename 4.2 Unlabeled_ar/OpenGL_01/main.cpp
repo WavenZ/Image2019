@@ -5,7 +5,7 @@
 
 	@time: 2019/5/12
 *************************************************/
-#include "ARPipeline.hpp"
+#include "src/ARPipeline.hpp"
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc.hpp>
@@ -16,7 +16,8 @@
 #include <thread>
 #include <string>
 
-#include "myOpenGL.hpp"
+#include "src/ARPipeline.hpp"
+#include "src/myOpenGL.hpp"
 void OpenCV_init();
 void matToArray(cv::Mat& img, unsigned char* data);
 void readThread(); // A thread to read image
@@ -31,16 +32,16 @@ float cy =  271.472298720301;
 cv::Mat imgOrigin, imgBuffer;
 cv::VideoCapture capture;
 int width = 1000, height = 562, nrChannels = 3;
-const std::string addr = "http://admin:admin@192.168.1.102:8081";
+const std::string addr = "http://admin:admin@192.168.1.101:8081";
 
-int useLoacalImg = 1;
+int useLoacalImg = 0;
 int main(int argc, const char* argv[])
 {
 	OpenCV_init();
 	unsigned char* imgData = new unsigned char[(unsigned int)(width * height * nrChannels)]; // Image data for OpenGL
 	float* rtArray = new float[16]; // Rotate and translatoin matrix for OpenGL
 	CameraCalibration calibration(fx, fy, cx, cy); // Camera calibration matrix for ARPipeline
-	cv::Mat patternImage = cv::imread("PyramidPattern3.jpg"); // Pattern image
+	cv::Mat patternImage = cv::imread("Pattern.jpg"); // Pattern image
 	ARPipeline pipeline(patternImage, calibration);
 	myOpenGL myGL(SCR_WIDTH, SCR_HEIGHT, fx, fy, cx, cy);
 
@@ -50,7 +51,7 @@ int main(int argc, const char* argv[])
 		matToArray(imgOrigin, imgData); // Convert opencv-mat to opengl-array
 		pipeline.processFrame(imgOrigin); // Process a single frame
 		Transformation Rt = pipeline.getPatternLocation(); // Get rotation-translation matrix
-		myGL.display(imgData, 1000, 562, (float*)Rt.getMat44().data); // Render the result with OpenGL
+		myGL.display(imgData, width, height, (float*)Rt.getMat44().data); // Render the result with OpenGL
 		calcTimeCost();
 	}
 	return 0;
@@ -94,12 +95,12 @@ void readThread() {
 // Image read
 void imgRead() {
 	if (useLoacalImg) {
-		imgOrigin = cv::imread("PyramidPatternTest8.bmp");
+		imgOrigin = cv::imread("test.bmp");
 	}
 	else {
 		readFlag = 1;
 		while (readFlag);
-		resize(imgOrigin, imgOrigin, cv::Size(1000, 562));
+		resize(imgOrigin, imgOrigin, cv::Size(width, height));
 	}
 }
 // Opencv initialization
