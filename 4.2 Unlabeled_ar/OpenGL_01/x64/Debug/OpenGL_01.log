@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\14355\git\Image2019\OpenGL__unlabeled_ar\OpenGL_01\main.cpp(26): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\git\Image2019\OpenGL__unlabeled_ar\OpenGL_01\main.cpp(27): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\git\Image2019\OpenGL__unlabeled_ar\OpenGL_01\main.cpp(28): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\git\Image2019\OpenGL__unlabeled_ar\OpenGL_01\main.cpp(29): warning C4305: “初始化”: 从“double”到“float”截断
+  OpenGL_01.vcxproj -> C:\Users\14355\git\Image2019\OpenGL__unlabeled_ar\x64\Debug\OpenGL_01.exe
