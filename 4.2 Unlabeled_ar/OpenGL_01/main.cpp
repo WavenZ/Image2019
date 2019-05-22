@@ -34,7 +34,7 @@ cv::VideoCapture capture;
 int width = 1000, height = 562, nrChannels = 3;
 const std::string addr = "http://admin:admin@192.168.1.101:8081";
 
-int useLoacalImg = 0;
+int useLoacalImg = 1;
 int main(int argc, const char* argv[])
 {
 	OpenCV_init();

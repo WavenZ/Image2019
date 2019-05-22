@@ -32,10 +32,10 @@ MarkerDetector::MarkerDetector(CameraCalibration calibration)
     bool centerOrigin = true;
     if (centerOrigin)
     {
-        m_markerCorners3d.push_back(cv::Point3f(-35.0f,-35.0f,0));
-        m_markerCorners3d.push_back(cv::Point3f(+35.0f,-35.0f,0));
-        m_markerCorners3d.push_back(cv::Point3f(+35.0f,+35.0f,0));
-        m_markerCorners3d.push_back(cv::Point3f(-35.0f,+35.0f,0));
+        m_markerCorners3d.push_back(cv::Point3f(-28.25f,-28.25f,0));
+        m_markerCorners3d.push_back(cv::Point3f(+28.25f,-28.25f,0));
+        m_markerCorners3d.push_back(cv::Point3f(+28.25f,+28.25f,0));
+        m_markerCorners3d.push_back(cv::Point3f(-28.25f,+28.25f,0));
     }
     else
     {
@@ -380,6 +380,8 @@ void MarkerDetector::estimatePosition(std::vector<Marker>& detectedMarkers)
         taux.convertTo(Tvec ,CV_32F);
 		Rvec.at<float>(0) = -Rvec.at<float>(0);
 		Tvec.at<float>(0) = -Tvec.at<float>(0);
+		std::cout << Rvec << std::endl;
+		std::cout << Tvec << std::endl << std::endl;
         cv::Mat_<float> rotMat(3,3); 
         cv::Rodrigues(Rvec, rotMat);
 		cv::Mat out;

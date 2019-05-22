@@ -1,14 +1,1 @@
-﻿  main.cpp
-C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\OpenGL_01\main.cpp(28): warning C4305: “初始化”: 从“double”到“float”截断
-C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\OpenGL_01\main.cpp(29): warning C4305: “初始化”: 从“double”到“float”截断
-C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\OpenGL_01\main.cpp(30): warning C4305: “初始化”: 从“double”到“float”截断
-C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\OpenGL_01\main.cpp(31): warning C4305: “初始化”: 从“double”到“float”截断
-  PatternDetector.cpp
-C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\OpenGL_01\src\PatternDetector.cpp(11): warning C4005: “_DEBUG”: 宏重定义
-  C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\OpenGL_01\src\PatternDetector.cpp: note: 参见“_DEBUG”的前一个定义
-C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\OpenGL_01\src\PatternDetector.cpp(74): warning C4244: “初始化”: 从“const int”转换到“float”，可能丢失数据
-C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\OpenGL_01\src\PatternDetector.cpp(74): warning C4244: “初始化”: 从“const int”转换到“const float”，可能丢失数据
-C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\OpenGL_01\src\PatternDetector.cpp(75): warning C4244: “初始化”: 从“const int”转换到“float”，可能丢失数据
-C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\OpenGL_01\src\PatternDetector.cpp(75): warning C4244: “初始化”: 从“const int”转换到“const float”，可能丢失数据
-  正在生成代码...
-  OpenGL_01.vcxproj -> C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\x64\Debug\OpenGL_01.exe
+﻿  OpenGL_01.vcxproj -> C:\Users\14355\git\Image2019\4.2 Unlabeled_ar\x64\Debug\OpenGL_01.exe

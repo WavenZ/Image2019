@@ -21,6 +21,9 @@
   <ItemGroup>
     <ClCompile Include="stereo_calib.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="stereo_calib.xml" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{C0209958-6233-4394-A11D-3EC8610E74FE}</ProjectGuid>

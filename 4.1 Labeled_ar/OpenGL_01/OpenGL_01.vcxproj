@@ -128,13 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="myOpenGL.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\CameraCalibration.cpp" />
     <ClCompile Include="src\GeometryTypes.cpp" />
     <ClCompile Include="src\glad.c" />
     <ClCompile Include="src\Marker.cpp" />
     <ClCompile Include="src\MarkerDetector.cpp" />
+    <ClCompile Include="src\myOpenGL.cpp" />
     <ClCompile Include="src\std_img.cpp" />
     <ClCompile Include="src\TinyLA.cpp" />
   </ItemGroup>
@@ -145,7 +145,6 @@
     <None Include="shader\vertex1.vs" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myOpenGL.hpp" />
     <ClInclude Include="src\BGRAVideoFrame.h" />
     <ClInclude Include="src\CameraCalibration.hpp" />
     <ClInclude Include="src\common.h" />
@@ -153,6 +152,7 @@
     <ClInclude Include="src\GeometryTypes.hpp" />
     <ClInclude Include="src\Marker.hpp" />
     <ClInclude Include="src\MarkerDetector.hpp" />
+    <ClInclude Include="src\myOpenGL.hpp" />
     <ClInclude Include="src\shader.h" />
     <ClInclude Include="src\std_img.h" />
     <ClInclude Include="src\TinyLA.hpp" />

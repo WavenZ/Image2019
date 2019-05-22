@@ -1,4 +1,4 @@
-#include "MarkerDetector.hpp"
+#include "src/MarkerDetector.hpp"
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc.hpp>
@@ -9,7 +9,7 @@
 #include <ctime>
 #include <thread>
 
-#include "myOpenGL.hpp"
+#include "src/myOpenGL.hpp"
 void OpenCV_init();
 void calcTimeCost();
 void matToArray(cv::Mat& img, unsigned char* data);
@@ -30,7 +30,7 @@ float distCoefficients[4] = {
 cv::Mat imgOrigin, imgBuffer;
 cv::VideoCapture capture;
 int width = 1000, height = 562, nrChannels = 3;
-const std::string addr = "http://admin:admin@192.168.1.109:8081";
+const std::string addr = "http://admin:admin@192.168.1.101:8081";
 
 int useLoacalImg = 0; // 0: Use local image    1£ºRead image from ipCamera
 int main()

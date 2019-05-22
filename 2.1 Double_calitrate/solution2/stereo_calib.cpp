@@ -113,7 +113,7 @@ StereoCalib(const vector<string>& imagelist, Size boardSize, float squareSize, b
                     break;
                 }
             }
-            if( displayCorners )
+            if(displayCorners )
             {
                 cout << filename << endl;
                 Mat cimg, cimg1;
@@ -275,15 +275,22 @@ StereoCalib(const vector<string>& imagelist, Size boardSize, float squareSize, b
     }
 
     //Precompute maps for cv::remap()
+	//Mat camera = (Mat_<double>(3, 3) <<
+	//	784.856407861628, 0., 495.982809896064,
+	//	0., 784.568668106306, 273.745965489351,
+	//	0., 0., 1.);
+	//Mat dist = (Mat_<double>(5, 1) << 3.3186929343409627e-01, -1.5328976453608059e+00,
+	//	-1.0555395111807473e-04, 5.3863533330160257e-05, 0.);
     initUndistortRectifyMap(cameraMatrix[0], distCoeffs[0], R1, P1, imageSize, CV_16SC2, rmap[0][0], rmap[0][1]);
     initUndistortRectifyMap(cameraMatrix[1], distCoeffs[1], R2, P2, imageSize, CV_16SC2, rmap[1][0], rmap[1][1]);
+	cout << cameraMatrix[0] << endl << distCoeffs[0] << endl << endl;
 
     Mat canvas;
     double sf;
     int w, h;
     if( !isVerticalStereo )
     {
-        sf = 600./MAX(imageSize.width, imageSize.height);
+		sf = 600. / MAX(imageSize.width, imageSize.height);
         w = cvRound(imageSize.width*sf);
         h = cvRound(imageSize.height*sf);
         canvas.create(h, w*2, CV_8UC3);
@@ -300,11 +307,16 @@ StereoCalib(const vector<string>& imagelist, Size boardSize, float squareSize, b
     {
         for( k = 0; k < 2; k++ )
         {
-            Mat img = imread(goodImageList[i*2+k], 0), rimg, cimg;
+			Mat img = imread(goodImageList[i * 2 + k], 0), rimg, cimg;
+			// namedWindow("temp", 2);
+			// resizeWindow("temp", 1366, 768);
+			Mat undistImg;
             remap(img, rimg, rmap[k][0], rmap[k][1], INTER_LINEAR);
-            cvtColor(rimg, cimg, COLOR_GRAY2BGR);
-            Mat canvasPart = !isVerticalStereo ? canvas(Rect(w*k, 0, w, h)) : canvas(Rect(0, h*k, w, h));
+			cvtColor(rimg, cimg, COLOR_GRAY2BGR);
+			Mat canvasPart = !isVerticalStereo ? canvas(Rect(w*k, 0, w, h)) : canvas(Rect(0, h*k, w, h));
             resize(cimg, canvasPart, canvasPart.size(), 0, 0, INTER_AREA);
+			// imshow("temp", canvasPart);
+			// waitKey(0);
             if( useCalibrated )
             {
                 Rect vroi(cvRound(validRoi[k].x*sf), cvRound(validRoi[k].y*sf),
@@ -319,7 +331,7 @@ StereoCalib(const vector<string>& imagelist, Size boardSize, float squareSize, b
         else
             for( j = 0; j < canvas.cols; j += 16 )
                 line(canvas, Point(j, 0), Point(j, canvas.rows), Scalar(0, 255, 0), 1, 8);
-        imshow("rectified", canvas);
+        // imshow("rectified", canvas);
         char c = (char)waitKey();
         if( c == 27 || c == 'q' || c == 'Q' )
             break;

@@ -36,10 +36,10 @@
     <ClCompile Include="src\TinyLA.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="myOpenGL.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\myOpenGL.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -88,7 +88,7 @@
     <ClInclude Include="src\TinyLA.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="myOpenGL.hpp">
+    <ClInclude Include="src\myOpenGL.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

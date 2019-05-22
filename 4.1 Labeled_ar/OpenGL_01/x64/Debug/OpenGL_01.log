@@ -1,9 +1,12 @@
 ﻿  main.cpp
-C:\Users\14355\git\Image2019\OpenGL__labeled_ar_\OpenGL_01\main.cpp(22): warning C4305: “初始化”: 从“double”到“float”截断
-C:\Users\14355\git\Image2019\OpenGL__labeled_ar_\OpenGL_01\main.cpp(23): warning C4305: “初始化”: 从“double”到“float”截断
-C:\Users\14355\git\Image2019\OpenGL__labeled_ar_\OpenGL_01\main.cpp(24): warning C4305: “初始化”: 从“double”到“float”截断
-C:\Users\14355\git\Image2019\OpenGL__labeled_ar_\OpenGL_01\main.cpp(25): warning C4305: “初始化”: 从“double”到“float”截断
-C:\Users\14355\git\Image2019\OpenGL__labeled_ar_\OpenGL_01\main.cpp(29): warning C4305: “初始化”: 从“double”到“float”截断
-C:\Users\14355\git\Image2019\OpenGL__labeled_ar_\OpenGL_01\main.cpp(52): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\14355\git\Image2019\OpenGL__labeled_ar_\OpenGL_01\main.cpp(58): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
-  OpenGL_01.vcxproj -> C:\Users\14355\git\Image2019\OpenGL__labeled_ar_\x64\Debug\OpenGL_01.exe
+C:\Users\14355\git\Image2019\4.1 Labeled_ar\OpenGL_01\main.cpp(22): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\git\Image2019\4.1 Labeled_ar\OpenGL_01\main.cpp(23): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\git\Image2019\4.1 Labeled_ar\OpenGL_01\main.cpp(24): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\git\Image2019\4.1 Labeled_ar\OpenGL_01\main.cpp(25): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\git\Image2019\4.1 Labeled_ar\OpenGL_01\main.cpp(29): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\git\Image2019\4.1 Labeled_ar\OpenGL_01\main.cpp(52): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\14355\git\Image2019\4.1 Labeled_ar\OpenGL_01\main.cpp(58): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  myOpenGL.cpp
+  std_img.cpp
+  正在生成代码...
+  OpenGL_01.vcxproj -> C:\Users\14355\git\Image2019\4.1 Labeled_ar\x64\Debug\OpenGL_01.exe
