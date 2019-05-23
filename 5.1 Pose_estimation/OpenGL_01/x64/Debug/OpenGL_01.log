@@ -1,0 +1,21 @@
+﻿  main.cpp
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(35): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(36): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(37): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(38): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(41): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(142): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(144): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(146): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(148): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(359): warning C4244: “初始化”: 从“unsigned __int64”转换到“float”，可能丢失数据
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(381): warning C4244: “初始化”: 从“_Ty”转换到“float”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(399): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(412): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(414): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\OpenGL_01\main.cpp(419): warning C4244: “初始化”: 从“unsigned __int64”转换到“float”，可能丢失数据
+  OpenGL_01.vcxproj -> C:\Users\14355\OneDrive\Code\OpenGL\OpenGL_07_axis\x64\Debug\OpenGL_01.exe
