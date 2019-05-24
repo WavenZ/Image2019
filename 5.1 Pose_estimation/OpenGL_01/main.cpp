@@ -32,13 +32,7 @@ static void onMouse(int event, int x, int y, int flags, void* param);
 #define CV_EVENT_LBUTTONDOWN 1           // left click
 unsigned int SCR_WIDTH = 1366;
 unsigned int SCR_HEIGHT = 768;
-float fx = 781.283471919768;
-float fy = 780.836322198165;
-float cx = 498.488969668705;
-float cy = 271.472298720301;
-float distCoefficients[4] = {
-		3.3186929343409627e-01, -1.5328976453608059e+00,
-	   -1.0555395111807473e-04, 5.3863533330160257e-05 };
+
 Mat cameraMatrix = (Mat_<double>(3, 3) <<
 	781.283471919768, 0., 498.488969668705,
 	0., 780.836322198165, 271.472298720301,
@@ -53,6 +47,8 @@ int useLoacalImg = 0;
 int main()
 {
 	camera_init();
+
+	// 以下全是OpenGl的初始化
 	// glfw: initialize and configure
 	// ------------------------------
 	glfwInit();
@@ -235,23 +231,26 @@ int main()
 	axisShader.setMat4("projection", projection);
 	axisShader.setMat4("view", view);
 	axisShader.setMat4("model", model);
-	// render loop
-	// -----------
-	// glColor4f(1.0f, 1.0f, 1.0f, 0.5f);
+	// 以上全是OpenGl的初始化
+
 	namedWindow("img", 2);
 	resizeWindow("img", 1000, 562);
-	setMouseCallback("img", onMouse, reinterpret_cast<void*> (&imgHsv));
+	setMouseCallback("img", onMouse, reinterpret_cast<void*> (&imgHsv)); // 鼠标
 	Mat img, imgThre;
-	Mat Rvec;
-	Mat_<float> Tvec;
+	Mat Rvec; // 世界坐标系到摄像机坐标系的旋转欧拉角
+	Mat_<float> Tvec; // 世界坐标系到摄像机坐标系的平移矢量
 	while (!glfwWindowShouldClose(window))
 	{
 		// input
-		processInput(window);
-		imgRead();
+		processInput(window); // 窗口输入事件
+		imgRead(); // 读图
 		imshow("img", imgOrigin);
 		waitKey(1);
 		GaussianBlur(imgOrigin, imgOrigin, cv::Size(3, 3), 1, 1);
+		// 1. 转换到HSV空间，用以提取颜色特征
+		// 2. 提取出四个特征点并按照空间关系排序
+		// 3. 计算出旋转平移矢量并估计摄像机姿态(solvePnp)
+		// 4. OpenGL渲染
 		cvtColor(imgOrigin, imgHsv, 40);
 		vector<Point2f> markers;
 		inRange(imgHsv, Scalar(115, 180, 150), Scalar(135, 255, 255), imgThre);
